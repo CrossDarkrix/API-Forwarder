@@ -1,5 +1,5 @@
 <div align="center">
-<img width="50px" height="50px" alt="API-Forwarder" src="https://raw.githubusercontent.com/CrossDarkrix/API-Forwarder/main/image/icon.png">
+<img width="100px" height="100px" alt="API-Forwarder" src="https://raw.githubusercontent.com/CrossDarkrix/API-Forwarder/main/image/icon.png">
 
   <h1>API Forwarder</h1>
   <h3>Simplify API calls by sharing a base URL</h3>
