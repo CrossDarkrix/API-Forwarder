@@ -17,11 +17,27 @@ providing a consistent and clean way to interact with HTTP-based APIs.
 ## Usage
 
 ```python
-import asyncio
 from api_forwarder import Forwarder
 
 async def get_api():
     async with Forwarder("https://api.example.com") as fw:
+        response = await fw.get("/v1/status")
+        response.raise_for_status()
+        print(response.json())
+```
+
+## Use Other Options
+
+```python
+from api_forwarder import Forwarder
+async def get_api():
+    async with Forwarder(
+        "https://api.example.com",
+        backend="cloudscraper",
+        timeout=5.0,
+        retries=3,
+        retry_delay=1.0,
+    ) as fw:
         response = await fw.get("/v1/status")
         response.raise_for_status()
         print(response.json())
